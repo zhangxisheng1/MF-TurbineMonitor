@@ -1,27 +1,21 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.dom.json",
-  // "include": [
-  //   "src/types/env.d.ts",
-  //   "src/types/axios.d.ts",
-  //   "src/**/*",
-  //   "src/**/*.vue"
-  // ],
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "types/**/*"
-  ],
-  "exclude": ["node_modules", "dist", "**/*.js", "docs"],
-  // "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
-    "composite": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    },
-    "types": ["vite-plugin-font/src/font"]
-  }
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src"]
 }
